@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meeting Summarizer</title>
+    <!-- Links to your CSS file -->
+    <link rel="stylesheet" href="/static/css/style.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Meeting Summarizer</h1>
+        <p>Upload a meeting recording (audio or video) to get an instant summary and action items.</p>
+
+        <!-- FILE UPLOAD FORM -->
+        <form id="uploadForm">
+            <input type="file" id="audio_file" name="audio_file" accept="audio/*,video/*" required hidden>
+            <label for="audio_file" class="upload-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload-cloud"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.9 20A5 5 0 0 0 18 10h-1.26A8 8 0 1 0 5 20"></path></svg>
+                <span id="fileNameDisplay">Click or drag file here</span>
+            </label>
+            <button type="submit" id="submitBtn" disabled>
+                Summarize Meeting
+            </button>
+        </form>
+
+        <!-- STATUS AND RESULTS SECTION -->
+        <div id="statusMessage" class="status-box hidden"></div>
+        
+        <div id="resultsSection" class="results-container">
+            <h2><span id="meetingTitle"></span> Analysis Complete</h2>
+            
+            <div class="result-block">
+                <h3>Summary</h3>
+                <p id="summaryResult"></p>
+            </div>
+
+            <div class="result-block">
+                <h3>Action Items / To-Do List</h3>
+                <pre id="todoListResult"></pre>
+            </div>
+
+            <div class="result-block">
+                <h3>Full Transcript</h3>
+                <p id="transcriptResult" class="transcript-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links to your JavaScript file -->
+    <script src="/static/js/app.js"></script> 
+</body>
+</html>

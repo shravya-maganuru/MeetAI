@@ -1,0 +1,5 @@
+meetings_summary/.venv/
+pycache/
+*.pyc
+.env
+meetings_summary/media/
