@@ -1,4 +1,4 @@
-# 🎙️ AI Meeting Summarizer (GPT-5 Nano Asynchronous Pipeline)
+# 🎙️ AI Meeting Summarizer
 
 This project is a full-stack web application designed to automatically transcribe, summarize, and extract actionable tasks from meeting recordings (audio or video). It uses a specialized **Asynchronous Polling** architecture to handle long-running API tasks without freezing the user interface, ensuring a robust and professional user experience.
 
